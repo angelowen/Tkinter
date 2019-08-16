@@ -28,7 +28,6 @@ def at(window):
         canvas.pack()
         move_active()
         window.mainloop()
-        #hello
 
 
 at(window)
