@@ -19,15 +19,14 @@ class Ball:
         a = canvas.create_image(10, 10, anchor='nw', image=newpic)
         self.shape = a
 
-        self.speedx = 9  # changed from 3 to 9
-        self.speedy = 9  # changed from 3 to 9
+        self.speedx = 9 
+        self.speedy = 9 
         self.active = True
         self.move_active()
         window.mainloop()
 
     def ball_update(self):
         canvas.move(self.shape, self.speedx, self.speedy)  # 移動的圖形和x,y
-        # 使用Canvas的方法coords(原item,坐标元组)来重新设置item的坐标
         pos = canvas.coords(self.shape)
         # print(pos)
         if pos[0]+SIZE >= WIDTH or pos[0] <= 0:
